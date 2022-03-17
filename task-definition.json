@@ -5,8 +5,8 @@
     "inferenceAccelerators": [],
     "containerDefinitions": [
         {
-            "name": "test",
-            "image": "746658770526.dkr.ecr.us-east-1.amazonaws.com/test",
+            "name": "test-container",
+            "image": "746658770526.dkr.ecr.us-east-1.amazonaws.com/test-repository",
             "memoryReservation": "128",
             "resourceRequirements": null,
             "essential": true,
@@ -28,7 +28,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/test",
+                    "awslogs-group": "/ecs/test-task-definition",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -46,7 +46,7 @@
     "memory": "512",
     "cpu": "256",
     "executionRoleArn": "arn:aws:iam::746658770526:role/ecsTaskExecutionRole",
-    "family": "test",
+    "family": "test-task-definition",
     "taskRoleArn": "arn:aws:iam::746658770526:role/ecsTaskExecutionRole",
     "tags": []
 }
